@@ -17,7 +17,7 @@ if __name__ == "__main__":
     test_height = 720 
     test_width = 1280
 
-    train_dataset_num = 10000
+    train_dataset_num = 20000
     test_dataset_num = 10
     train_cut_num = 10
     test_cut_num = 1
