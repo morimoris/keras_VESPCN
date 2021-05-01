@@ -29,7 +29,7 @@ if __name__ == "__main__":
     input_channels = 1
     mag = 4
 
-    MAX_BATSH_SIZE = 128
+    MAX_BATCH_SIZE = 128
     EPOCHS = 1000
     
     def psnr(y_true, y_pred):
@@ -87,7 +87,7 @@ if __name__ == "__main__":
                         optimizer = optimizers,
                         metrics = [psnr])
 
-        x = MAX_BATSH_SIZE
+        x = MAX_BATCH_SIZE
         i = 0
         while x > 1:
             x /= 2
@@ -104,7 +104,7 @@ if __name__ == "__main__":
                         train_y,
                         epochs = EPOCHS - 10 * i,
                         verbose = 2,
-                        batch_size = MAX_BATSH_SIZE)
+                        batch_size = MAX_BATCH_SIZE)
 
         train_model.save("VESPCN_model.h5")
 
